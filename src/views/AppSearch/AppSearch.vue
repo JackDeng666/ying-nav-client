@@ -155,6 +155,7 @@ const searchItemClick = (index: number) => {
     <div class="buoy" ref="buoyRef">
       <i class="iconfont icon-arrow-r_fill"></i>
     </div>
+    test
     <MimicryInput
       type="text"
       id="search-input"
