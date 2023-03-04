@@ -1,0 +1,8 @@
+version: "3"
+services:
+  ying-nav-client-app:
+    build:
+      context: .
+      dockerfile: docker-ying-nav-client.Dockerfile
+    ports:
+      - 4000:80

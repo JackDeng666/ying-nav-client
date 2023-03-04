@@ -1,0 +1,22 @@
+export default [
+  '/images/genshin/00e93901213fb80e6a84e079baef0227b838948a.jpeg',
+  '/images/genshin/0df3d7ca7bcb0a4640d066bae75ddb2d6a60af0f.jpeg',
+  '/images/genshin/1f178a82b9014a904ee6e31f2649141bb21bee04.jpeg',
+  '/images/genshin/2fdda3cc7cd98d1095211fc9b20195077aec901c.jpeg',
+  '/images/genshin/3b292df5e0fe992526321c7ca69673d68db171a3.jpeg',
+  '/images/genshin/3c6d55fbb2fb43160e5f5c64b49a6b2a09f7d337.jpeg',
+  '/images/genshin/4bed2e738bd4b31c04db77f90be80a769f2ff851.jpeg',
+  '/images/genshin/4bed2e738bd4b31cbc0da96e25e80a769f2ff8fd.jpeg',
+  '/images/genshin/18d8bc3eb13533fac24510ce24edd01640345b22.jpeg',
+  '/images/genshin/21a4462309f79052c1f5591880cdfac37acbd5f1.jpeg',
+  '/images/genshin/71cf3bc79f3df8dc9dfc019a432f5f82461028bb.jpeg',
+  '/images/genshin/5366d0160924ab18a1113d3fa6c4cbc47b890b7e.jpeg',
+  '/images/genshin/91529822720e0cf3e8983ca08778df16bf09aac1.jpeg',
+  '/images/genshin/a044ad345982b2b7baab40edbd93e6e676099bae.jpeg',
+  '/images/genshin/b2de9c82d158ccbf6a206a9f95e69137b03541ba.jpeg',
+  '/images/genshin/b90e7bec54e736d1f73f49c0176e62cbd4626996.jpeg',
+  '/images/genshin/d52a2834349b033ba9c9636899f01bdad439bd83.jpeg',
+  '/images/genshin/f2deb48f8c5494ee79ce69f5a6cbcdf798257e31.jpeg',
+  '/images/genshin/faedab64034f78f079c6034bf60f275cb2191c04.jpeg',
+  '/images/genshin/iTPMOo9fAUXELm4dn62AUAb3c64a7639d76a75485e81c1dddd946a.jpg'
+]
