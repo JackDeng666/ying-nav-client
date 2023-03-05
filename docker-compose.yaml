@@ -6,9 +6,9 @@ services:
       dockerfile: docker-ying-nav-client.Dockerfile
     ports:
       - 4000:80
-    labels:
+    # labels:
       # 为 cra 配置我们的自定义域名
-      - "traefik.http.routers.nav.rule=Host(`nav.ying-land.top`)"
+      # - "traefik.http.routers.nav.rule=Host(`nav.ying-land.top`)"
       # 设置 https，此时我们的 certresolver 为 le，与上篇文章配置保持一致
       # - traefik.http.routers.cra.tls=true
       # - traefik.http.routers.cra.tls.certresolver=le
@@ -18,13 +18,13 @@ services:
       dockerfile: docker-ying-nav-client.Dockerfile
     ports:
       - 3000:80
-    labels:
+    # labels:
       # 为 cra 配置我们的自定义域名
-      - "traefik.http.routers.testnav.rule=Host(`testnav.ying-land.top`)"
+      # - "traefik.http.routers.test-nav.rule=Host(`test-nav.ying-land.top`)"
       # 设置 https，此时我们的 certresolver 为 le，与上篇文章配置保持一致
       # - traefik.http.routers.cra.tls=true
       # - traefik.http.routers.cra.tls.certresolver=le
-networks:
-  default:
-    external:
-      name: traefik_default
+# networks:
+#   default:
+#     external:
+#       name: traefik_default
