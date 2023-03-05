@@ -15,6 +15,4 @@ jobs:
       # 切出代码，使用该 Action 将可以拉取最新代码
       - uses: actions/checkout@v2
       - name: Deploy
-        run: docker-compose up --build -d ying-nav-client-app-test
-      - name: Clear
-        run: docker system prune -f
+        run: docker-compose up -d ying-nav-client-app-test
