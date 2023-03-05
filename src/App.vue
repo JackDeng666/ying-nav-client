@@ -4,6 +4,7 @@
 
 <script setup lang="ts">
 import AppHome from '@/views/AppHome.vue'
+console.log('main')
 </script>
 
 <style lang="scss">
