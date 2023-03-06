@@ -12,13 +12,11 @@ jobs:
     # 该 Job 在自建的 Runner 中执行
     runs-on: self-hosted
     steps:
-      - name: Change directory
-        run: cd /root/ying-nav-client
-        working-directory: /root/ying-nav-client
-      - run: pwd
-      - run: git checkout test
-      - run: git pull
       - name: Deploy
-        run: docker-compose up -d --build ying-nav-client-app-test
-      - name: Clear
-        run: docker rmi $(docker images -f "dangling=true" -q)
+        run: |
+          cd /root/ying-nav-client
+          pwd
+          git checkout test
+          git pull
+          docker-compose up -d --build ying-nav-client-app-test
+          docker rmi $(docker images -f "dangling=true" -q)
