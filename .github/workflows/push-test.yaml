@@ -13,6 +13,7 @@ jobs:
     runs-on: self-hosted
     steps:
       - run: cd /root/ying-nav-client
+      - run: pwd
       - run: git checkout test
       - run: git pull
       - name: Deploy
