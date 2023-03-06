@@ -12,7 +12,10 @@ jobs:
     # 该 Job 在自建的 Runner 中执行
     runs-on: self-hosted
     steps:
-      - run: cd /root/ying-nav-client
+      - name: Change directory
+        run: cd /root/ying-nav-client
+        working-directory: /root/ying-nav-client
+      - run: pwd
       - run: git checkout main
       - run: git pull
       - name: Deploy
