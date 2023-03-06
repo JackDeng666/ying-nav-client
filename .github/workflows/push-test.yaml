@@ -11,6 +11,10 @@ jobs:
   deploy:
     # 该 Job 在自建的 Runner 中执行
     runs-on: self-hosted
+    container:
+      image: docker:latest
+      resources:
+        memory: 2g
     steps:
       - name: Deploy
         run: |
