@@ -4,7 +4,7 @@
 
 <script setup lang="ts">
 import AppHome from '@/views/AppHome.vue'
-console.log('终极再来')
+console.log('终极再来fuck')
 </script>
 
 <style lang="scss">
