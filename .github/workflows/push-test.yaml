@@ -11,14 +11,8 @@ jobs:
   deploy:
     # 该 Job 在自建的 Runner 中执行
     runs-on: self-hosted
-    resources:
-      memory: 1g
     steps:
       - name: Deploy
         run: |
-          cd /root/ying-nav-client
-          pwd
-          git checkout test
-          git pull
-          docker-compose up -d --build ying-nav-client-app-test
-          docker rmi $(docker images -f "dangling=true" -q)
+          cd /root
+          ./autodeploytest.sh

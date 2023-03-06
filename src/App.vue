@@ -4,7 +4,7 @@
 
 <script setup lang="ts">
 import AppHome from '@/views/AppHome.vue'
-console.log('test7677')
+console.log('终极')
 </script>
 
 <style lang="scss">
