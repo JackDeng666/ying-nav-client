@@ -14,5 +14,9 @@ jobs:
     steps:
       - name: Deploy
         run: |
-          cd /root
-          ./autodeploytest.sh
+        cd /root/ying-nav-client
+        pwd
+        git checkout test
+        git pull
+        docker-compose up -d --build ying-nav-client-app-test
+        docker rmi $(docker images -f "dangling=true" -q)
