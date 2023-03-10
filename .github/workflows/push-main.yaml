@@ -12,7 +12,11 @@ jobs:
     # 该 Job 在自建的 Runner 中执行
     runs-on: self-hosted
     steps:
-      # 切出代码，使用该 Action 将可以拉取最新代码
-      - uses: actions/checkout@v2
       - name: Deploy
-        run: docker-compose up -d ying-nav-client-app-main
+        run: |
+          cd /root/ying-nav-client
+          pwd
+          git checkout main
+          git pull
+          docker-compose up -d --build ying-nav-client-app-main
+          docker rmi $(docker images -f "dangling=true" -q)
