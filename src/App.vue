@@ -4,7 +4,7 @@
 
 <script setup lang="ts">
 import AppHome from '@/views/AppHome.vue'
-console.log('试试')
+console.log('多搞搞')
 </script>
 
 <style lang="scss">
