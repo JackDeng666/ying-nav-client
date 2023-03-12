@@ -19,7 +19,7 @@ jobs:
       - name: Install
         run: yarn
       - name: Run Build
-        run: npm run build:main
+        run: npm run build:prod
       - name: Build Image
         run: docker image build -t jackdeng666/ying-nav-client:main -f docker-ying-nav-client.Dockerfile .
       - name: Login to Registry
