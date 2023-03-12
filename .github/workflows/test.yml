@@ -27,6 +27,7 @@ jobs:
       - name: Push Image
         run: docker push jackdeng666/ying-nav-client:test
   deploy:
+    needs: [build]
     # 该 Job 在自建的 Runner 中执行
     runs-on: self-hosted
     steps:
