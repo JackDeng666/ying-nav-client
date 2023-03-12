@@ -4,7 +4,7 @@
 
 <script setup lang="ts">
 import AppHome from '@/views/AppHome.vue'
-console.log('cao')
+console.log('终极部署')
 </script>
 
 <style lang="scss">
