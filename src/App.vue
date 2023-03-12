@@ -4,7 +4,7 @@
 
 <script setup lang="ts">
 import AppHome from '@/views/AppHome.vue'
-console.log('多搞搞')
+console.log('终极部署方案测试')
 </script>
 
 <style lang="scss">
