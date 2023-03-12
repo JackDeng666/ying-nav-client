@@ -19,6 +19,6 @@ jobs:
           git checkout test
           git pull
           yarn
-          npm run build
+          npm run build:test
           docker-compose up -d --build ying-nav-client-app-test
           docker rmi $(docker images -f "dangling=true" -q)
