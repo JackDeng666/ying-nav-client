@@ -1,0 +1,42 @@
+name: MainDeploy
+
+# 执行 CI 的时机: 当 git push 到 main 分支时
+on:
+  push:
+    branches:    
+      - main
+# 执行所有的 jobs
+jobs:
+  build:
+    runs-on: ubuntu-latest  
+    steps:
+      - uses: actions/checkout@v3
+      - name: use node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: "yarn"
+      - name: Install
+        run: yarn
+      - name: Run Build
+        run: npm run build:main
+      - name: Build Image
+        run: docker image build -t jackdeng666/ying-nav-client:main -f docker-ying-nav-client.Dockerfile .
+      - name: Login to Registry
+        run: docker login --username=${{ secrets.DOCKER_USERNAME }} --password ${{ secrets.DOCKER_PASSWORD }}
+      - name: Push Image
+        run: docker push jackdeng666/ying-nav-client:main
+  deploy:
+    needs: [build]
+    # 该 Job 在自建的 Runner 中执行
+    runs-on: self-hosted
+    steps:
+      - name: Deploy
+        run: |
+          cd /root/ying-land
+          pwd
+          docker stop $(docker ps -a -f name=client-main -q)
+          docker rm $(docker ps -a -f name=client-main -q)
+          docker rmi $(docker images -f dangling=true -q)
+          docker-compose pull ying-nav-client-main
+          docker-compose up -d ying-nav-client-main
